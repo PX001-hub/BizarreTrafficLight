@@ -16,33 +16,35 @@ struct ContentView: View {
                 .fill(Color.red)
                 .frame(width: 180, height: 180)
                 .offset(x: 0, y: -200)
-                
+            
             ZStack {
                 Color.black.opacity(isActivated ? 0.5 : 0)
                 VStack {
-                Spacer()
-                Circle()
-                    .fill(Color.blue)
-                    .frame(width: isActivated ? 50 : 65, height: isActivated ? 50 : 65)
-                    .shadow(radius: 5)
-                    .overlay(Image(systemName: "1.circle.fill"))
-                    .foregroundColor(.white)
-                    .offset(x: 0, y: -10)
-                    .onTapGesture {
-                        self.isActivated.toggle()
-                    }
+                    Spacer()
+                    Circle()
+                        .fill(Color.blue)
+                        .frame(width: isActivated ? 50 : 65, height: isActivated ? 50 : 65)
+                        .shadow(radius: 5)
+                        .overlay(Image(systemName: "1.circle.fill"))
+                        .foregroundColor(.white)
+                        .offset(x: 0, y: -10)
+                        .onTapGesture {
+                            withAnimation(.spring()){
+                                self.isActivated.toggle()
+                            }
+                        }
                 }
             }
+            .edgesIgnoringSafeArea(isActivated ? .all : .horizontal)
+            
+            
         }
-        .edgesIgnoringSafeArea(isActivated ? .all : .horizontal)
-        .animation(.spring())
+    }
     
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
+    
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
- 
