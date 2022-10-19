@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ColorCircleView: View {
     var body: some View {
-        ZStack {
-            Color.white
+        
+          
             Circle()
                 .fill(Color.red)
                 .frame(width: 150, height: 150)
@@ -32,4 +32,4 @@ struct ColorCircleView: View {
             ColorCircleView()
         }
     }
-}
+

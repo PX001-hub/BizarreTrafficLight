@@ -24,7 +24,7 @@ struct ContentView: View {
                     Circle()
                         .fill(Color.blue)
                         .frame(width: isActivated ? 50 : 65, height: isActivated ? 50 : 65)
-                        .shadow(radius: 5)
+                        .shadow(radius: 15)
                         .overlay(Image(systemName: "1.circle.fill"))
                         .foregroundColor(.white)
                         .offset(x: 0, y: -10)
