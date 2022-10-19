@@ -13,20 +13,8 @@ struct ContentView: View {
     
     
     var body: some View {
-        ZStack {
-            Color.white
-            Circle()
-                .fill(Color.red)
-                .frame(width: 150, height: 150)
-                .offset(x: 0, y: -250)
-            Circle()
-                .fill(Color.yellow)
-                .frame(width: 150, height: 150)
-                .offset(x: 0, y: -60)
-            Circle()
-                .fill(Color.green)
-                .frame(width: 150, height: 150)
-                .offset(x: 0, y: 120)
+        
+            
             
             
             ZStack {
@@ -59,4 +47,4 @@ struct ContentView: View {
         }
     }
     
-}
+

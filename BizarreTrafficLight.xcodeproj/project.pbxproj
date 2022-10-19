@@ -11,6 +11,7 @@
 		2CE074D429000A3A004A4BCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE074D329000A3A004A4BCD /* ContentView.swift */; };
 		2CE074D629000A3B004A4BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE074D529000A3B004A4BCD /* Assets.xcassets */; };
 		2CE074D929000A3B004A4BCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE074D829000A3B004A4BCD /* Preview Assets.xcassets */; };
+		2CE074E02900863A004A4BCD /* ColorCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE074DF2900863A004A4BCD /* ColorCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2CE074D329000A3A004A4BCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CE074D529000A3B004A4BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CE074D829000A3B004A4BCD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CE074DF2900863A004A4BCD /* ColorCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				2CE074D129000A3A004A4BCD /* BizarreTrafficLightApp.swift */,
 				2CE074D329000A3A004A4BCD /* ContentView.swift */,
+				2CE074DF2900863A004A4BCD /* ColorCircleView.swift */,
 				2CE074D529000A3B004A4BCD /* Assets.xcassets */,
 				2CE074D729000A3B004A4BCD /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				2CE074D429000A3A004A4BCD /* ContentView.swift in Sources */,
 				2CE074D229000A3A004A4BCD /* BizarreTrafficLightApp.swift in Sources */,
+				2CE074E02900863A004A4BCD /* ColorCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
