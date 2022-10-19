@@ -9,13 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isActivated = false
+    
+    
+    
     var body: some View {
         ZStack {
             Color.white
             Circle()
                 .fill(Color.red)
-                .frame(width: 180, height: 180)
-                .offset(x: 0, y: -200)
+                .frame(width: 150, height: 150)
+                .offset(x: 0, y: -250)
+            Circle()
+                .fill(Color.yellow)
+                .frame(width: 150, height: 150)
+                .offset(x: 0, y: -60)
+            Circle()
+                .fill(Color.green)
+                .frame(width: 150, height: 150)
+                .offset(x: 0, y: 120)
+            
             
             ZStack {
                 Color.black.opacity(isActivated ? 0.5 : 0)
