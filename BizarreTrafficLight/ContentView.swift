@@ -25,6 +25,8 @@ struct ContentView: View {
         }
     }
     
+}
+    
     extension ContentView {
         var body: some View {
             ZStack {
@@ -53,6 +55,6 @@ struct ContentView: View {
             ContentView()
         }
     }
-}
+
 
 
