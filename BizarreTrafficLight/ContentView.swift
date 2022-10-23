@@ -7,44 +7,54 @@
 
 import SwiftUI
 
+enum CurrentLight {
+    case red, yellow, green, off
+}
+
 struct ContentView: View {
-    @State private var isActivated = false
+    @State private var buttonTitle = "START"
+    @State private var currentLight = CurrentLight.off
     
-    
-    
-    var body: some View {
+    private func nextColor() {
         
-            
-            
-            
-            ZStack {
-                Color.black.opacity(isActivated ? 0.5 : 0)
-                VStack {
-                    Spacer()
-                    Circle()
-                        .fill(Color.blue)
-                        .frame(width: isActivated ? 50 : 65, height: isActivated ? 50 : 65)
-                        .shadow(radius: 15)
-                        .overlay(Image(systemName: "1.circle.fill"))
-                        .foregroundColor(.white)
-                        .offset(x: 0, y: -10)
-                        .onTapGesture {
-                            withAnimation(.spring()){
-                                self.isActivated.toggle()
-                            }
-                        }
-                }
-            }
-            .edgesIgnoringSafeArea(isActivated ? .all : .horizontal)
-            
-            
+        switch currentLight {
+        case .red: currentLight = .yellow
+        case .yellow: currentLight = .green
+        case .green: currentLight = .red
+        case .off: currentLight = .red
         }
     }
+    
+    extension ContentView {
+        var body: some View {
+            ZStack {
+                Color(.black)
+                    .ignoresSafeArea()
+                
+                VStack(spacing: 20) {
+                    ColorCircleView(color: .red, opacity: currentLight == .red ? 1 : 0.3)
+                    ColorCircleView(color: .yellow, opacity: currentLight == .yellow ? 1 : 0.3)
+                    ColorCircleView(color: .green, opacity: currentLight == .green ? 1 : 0.3)
+                    Spacer()
+                    ChangeColorButton(title: buttonTitle) {
+                        if buttonTitle == "START" {
+                            buttonTitle = "NEXT"
+                        }
+                        nextColor()
+                    }
+                }
+                .padding()
+            }
+        }
+    }
+    
+
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
         }
     }
-    
+}
+
 
