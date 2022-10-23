@@ -8,6 +8,7 @@
 import SwiftUI
 
 @main
+
 struct BizarreTrafficLightApp: App {
     var body: some Scene {
         WindowGroup {
