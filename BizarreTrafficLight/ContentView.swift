@@ -32,11 +32,11 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 
                 VStack(spacing: 20) {
-                    ColorCircleView(color: .red, opacity: currentLight == .red ? 1 : 0.3)
-                    ColorCircleView(color: .yellow, opacity: currentLight == .yellow ? 1 : 0.3)
-                    ColorCircleView(color: .green, opacity: currentLight == .green ? 1 : 0.3)
+                    ColorCircleView(opacity: currentLight == .red ? 1 : 0.3, color: .red)
+                    ColorCircleView(opacity: currentLight == .yellow ? 1 : 0.3, color: .yellow)
+                    ColorCircleView(opacity: currentLight == .green ? 1 : 0.3, color: .green)
                     Spacer()
-                    ChangeColorButton(title: buttonTitle) {
+                    StartButtonView(title: buttonTitle) {
                         if buttonTitle == "START" {
                             buttonTitle = "NEXT"
                         }
@@ -47,8 +47,6 @@ struct ContentView: View {
             }
         }
     }
-    
-
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
